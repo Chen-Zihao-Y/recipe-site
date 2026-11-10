@@ -1,3 +1,26 @@
+:root {
+  --bg: #ffffff;
+  --text: #222222;
+  --card-bg: #fff;
+  --border: #f0e4cf;
+  --primary: #c47220;
+}
+.dark {
+  --bg: #1a1a1a;
+  --text: #eeeeee;
+  --card-bg: #2c2c2c;
+  --border: #444444;
+  --primary: #ffb266;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
 .hero {
   text-align: center;
   padding: 40px 20px 20px;
