@@ -4,6 +4,9 @@
   --card-bg: #fff;
   --border: #f0e4cf;
   --primary: #c47220;
+  --tag-bg: #ffe8cc;
+  --tag-text: #b35900;
+  --link-color: #0000ee;
 }
 body.dark-mode {
   --bg: #1a1a1a;
@@ -11,6 +14,9 @@ body.dark-mode {
   --card-bg: #2c2c2c;
   --border: #444444;
   --primary: #ffb266;
+  --tag-bg: #3a2f22;
+  --tag-text: #ffd27a;
+  --link-color: #88bbff;
 }
 
 body {
@@ -19,6 +25,12 @@ body {
   transition: 0.3s;
   margin: 0;
   font-family: system-ui, sans-serif;
+  padding: 12px;
+}
+
+/* 导航链接样式（全部页面生效） */
+nav a {
+  color: var(--link-color);
 }
 
 .hero {
@@ -29,6 +41,11 @@ body {
   font-size: 32px;
   margin-bottom: 10px;
 }
+.hero p {
+  color: var(--text);
+  opacity: 0.8;
+}
+
 .card-grid {
   max-width: 1000px;
   margin: 0 auto;
@@ -46,16 +63,12 @@ body {
 }
 .card-content .tag {
   display: inline-block;
-  background-color: #ffe8cc;
-  color: #b35900;
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
   font-size: 13px;
   padding: 4px 10px;
   border-radius: 20px;
   margin-bottom: 12px;
-}
-body.dark-mode .tag {
-  background-color: #3a2f22;
-  color: #ffd27a;
 }
 .card-content h2 {
   font-size: 20px;
@@ -76,11 +89,46 @@ body.dark-mode .card-content p {
   text-decoration: none;
 }
 
-/* 食材勾选样式 */
+/* Contact页面两栏卡片 */
+.two-column {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 20px;
+}
+.info-card, .form-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+input, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 8px;
+  margin: 6px 0 14px;
+  border-radius: 6px;
+}
+
+/* 食材勾选 */
 .ingredient-list li {
   cursor: pointer;
 }
 .ingredient-list li.checked {
   text-decoration: line-through;
   opacity: 0.6;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size:14px;
+  color: var(--text);
+  opacity:0.7;
 }

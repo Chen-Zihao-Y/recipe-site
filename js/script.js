@@ -7,12 +7,12 @@ if (themeBtn) {
     localStorage.setItem('darkMode', isDark);
   })
 }
-// 页面加载时读取本地存储，恢复深色模式
+// 打开页面自动读取上次的深色/浅色设置，所有页面同步
 if (localStorage.getItem('darkMode') === 'true') {
   document.body.classList.add('dark-mode');
 }
 
-// 食材点击勾选
+// 食材勾选（只在recipes页面生效，其他页面没有这个列表也不会报错）
 const ingredientItems = document.querySelectorAll('.ingredient-list li');
 ingredientItems.forEach(item => {
   item.addEventListener('click', () => {
@@ -20,7 +20,7 @@ ingredientItems.forEach(item => {
   });
 })
 
-// 联系页弹窗
+// Contact弹窗（只在contact页面生效）
 const msgBtn = document.getElementById('msgBtn');
 if(msgBtn){
   msgBtn.addEventListener('click', ()=>{
