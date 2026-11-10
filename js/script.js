@@ -7,7 +7,7 @@ if (themeBtn) {
     localStorage.setItem('darkMode', isDark);
   })
 }
-// 记住上次的深色模式
+// 页面加载时读取本地存储，恢复深色模式
 if (localStorage.getItem('darkMode') === 'true') {
   document.body.classList.add('dark-mode');
 }
