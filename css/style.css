@@ -2,12 +2,10 @@
   text-align: center;
   padding: 40px 20px 20px;
 }
-
 .hero h1 {
   font-size: 32px;
   margin-bottom: 10px;
 }
-
 .card-grid {
   max-width: 1000px;
   margin: 0 auto;
@@ -16,15 +14,13 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
 }
-
 .recipe-card {
   background: var(--card-bg);
-  border: 1px solid #f0e4cf;
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
-
 .card-content .tag {
   display: inline-block;
   background-color: #ffe8cc;
@@ -34,23 +30,23 @@
   border-radius: 20px;
   margin-bottom: 12px;
 }
-
-.dark-mode .tag {
+.dark .tag {
   background-color: #3a2f22;
   color: #ffd27a;
 }
-
 .card-content h2 {
   font-size: 20px;
   margin-bottom: 8px;
+  color: var(--text);
 }
-
 .card-content p {
   font-size: 14px;
   color: #666;
   margin-bottom: 14px;
 }
-
+.dark .card-content p {
+  color: #bbbbbb;
+}
 .card-content a {
   color: var(--primary);
   font-weight: bold;
